@@ -37,5 +37,26 @@
     <footer>
         <p>&copy; 2023 Personal Budget App. All rights reserved.</p>
     </footer>
+        <!-- A11y Change 1: Added alt text to the logo for images -->
+        <img src="logo.png" alt="Personal Budget App Logo">
+
+        <!-- A11y Change 2: Added labels for form elements for improved form accessibility -->
+        <form>
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name">
+            
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email">
+            
+            <button type="submit">Submit</button>
+        </form>
+    
+        <!-- A11y Change 3: Increased text contrast for better readability -->
+        <style>
+            body {
+                background-color: #f0f0f0;
+                color: #333;
+            }
+        </style>
 </body>
 </html>
