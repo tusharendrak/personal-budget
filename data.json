@@ -1,0 +1,44 @@
+{
+    "myBudget": [
+        {
+            "title": "Dining Out",
+            "budget": 250
+        },
+        {
+            "title": "Housing",
+            "budget": 600
+        },
+        {
+            "title": "Grocery Shopping",
+            "budget": 150
+        },
+        {
+            "title": "Fuel Expenses",
+            "budget": 120
+        },
+        {
+            "title": "Education Fees",
+            "budget": 900
+        },
+        {
+            "title": "Internet Bill",
+            "budget": 55
+        },
+        {
+            "title": "Books and Magazines",
+            "budget": 30
+        },
+        {
+            "title": "Water Charges",
+            "budget": 35
+        },
+        {
+            "title": "Electricity Bill",
+            "budget": 70
+        },
+        {
+            "title": "Clothing Expenses",
+            "budget": 80
+        }
+    ]
+}

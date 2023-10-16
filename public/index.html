@@ -4,205 +4,267 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Personal Budget</title>
-    <meta name="description" content="A free personal budger app">
-    <meta name="keywords" content="app free budget finance">
-    <link rel="stylesheet" href="reset.css">
-    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="reset.css"> 
+    <link rel="stylesheet" href="main.css"> 
+
+
+    <meta name="robots" content="index, follow">   <!-- This is an SEO Change 1 -->
+
+    <meta name="description" content="Take control of your finances with My Personal Budget application,   
+     your trusted personal budgeting tool. Set goals, track expenses, and achieve financial freedom effortlessly. 
+     Join us today to start your journey to financial wellness.">           <!-- This is an SEO Change 2-->
+
+    <meta name="og:title" property="og:title" content="World's Best Personal Budget Website">  <!-- This is an SEO Change 3-->
+
+    <style>
+        #pieChartContainer{
+            font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+            width: 960px;
+            height: 500px;
+            position: relative;
+          }
+          
+          svg{
+              width: 100%;
+              height: 100%;
+          }
+          
+          path.slice{
+              stroke-width:2px;
+          }
+          
+          polyline{
+              opacity: .3;
+              stroke: black;
+              stroke-width: 2px;
+              fill: none;
+          }
+    </style>
+
 </head>
 <body>
 
-<a href="#main" class="skip">Skip to content</a>
+ 
 
-    <nav>
-        <ul>
-            <li><a href="/">Home</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="login.html">Login</a></li>
-            <li><a href="https://google.com">Google</a></li>
-        </ul>
+    <!-- This is a Semantic HTML Change 1-->
+    <!-- adding a nav element is Semantic HTML change -->
+
+
+    <nav role="navigation">         <!-- This is an A11y Change 1 --> <!--  adding ARIA roles like role="navigation" to indicate that they are menu items for easy accessibility -->
+        <div class="menu">
+            <ul class="menu">
+                <li role="menuitem"><a href="/">Homepage</a></li>
+                <li role="menuitem"><a href="about.html">About</a></li>
+                <li role="menuitem"><a href="login.html" title="link which redirects to login page">Login</a></li>  <!-- This is an A11y Change 2--> <!-- adding a title for accessibility  -->
+                <li role="menuitem"><a href="https://google.com">Google</a></li>
+            </ul>
+        </div>
     </nav>
+    
 
-    <div class="hero">
-        <h1>Personal Budget</h1>
-        <h2>A personal-budget management app</h2>
+
+    <!-- This is a Semantic HTML Change 2-->
+    <!-- adding a header element is a semantic HTML change -->
+    <div class="hero">          
+        <header>                    
+            <h1>Personal Budget</h1>
+            <h2>A personal-budget management app</h2>
+        </header>
     </div>
 
-    <main class="center" id="main">
+ 
+
+    <div class="container center">
 
         <div class="page-area">
 
-            <article>
+            <div class="text-box">
                 <h1>Stay on track</h1>
                 <p>
                     Do you know where you are spending your money? If you really stop to track it down,
                     you would get surprised! Proper budget management depends on real data... and this
                     app will help you with that!
                 </p>
-            </article>
+            </div>
     
-            <article>
+            <div class="text-box">
                 <h1>Alerts</h1>
                 <p>
                     What if your clothing budget ended? You will get an alert. The goal is to never go over the budget.
                 </p>
-            </article>
+            </div>
     
-            <article>
+            <div class="text-box">
                 <h1>Results</h1>
                 <p>
                     People who stick to a financial plan, budgeting every expense, get out of debt faster!
                     Also, they to live happier lives... since they expend without guilt or fear... 
                     because they know it is all good and accounted for.
                 </p>
-            </article>
+            </div>
     
-            <article>
+            <div class="text-box">
                 <h1>Free</h1>
                 <p>
                     This app is free!!! And you are the only one holding your data!
                 </p>
-            </article>
+            </div>
     
-            <article>
+            <div class="text-box">
                 <h1>Stay on track</h1>
                 <p>
                     Do you know where you are spending your money? If you really stop to track it down,
                     you would get surprised! Proper budget management depends on real data... and this
                     app will help you with that!
                 </p>
-            </article>
+            </div>
     
-            <article>
+            <div class="text-box">
                 <h1>Alerts</h1>
                 <p>
                     What if your clothing budget ended? You will get an alert. The goal is to never go over the budget.
                 </p>
-            </article>
+            </div>
     
-            <article>
-                <h1>Results</h1>
-                <p>
-                    People who stick to a financial plan, budgeting every expense, get out of debt faster!
-                    Also, they to live happier lives... since they expend without guilt or fear... 
-                    because they know it is all good and accounted for.
-                </p>
-            </article>
+            <div class="text-box">
+                <h1>Visualization using D3.js</h1>
+                <div id="pieChartContainer"></div>
+            </div>
     
-            <article>
-                <h1>Monthly Budget Pie Chart</h1>
+            <div class="text-box">
+                <h1>Visualization using Chart.js</h1>
                 <p>
                     <canvas id="myChart" width="400" height="400"></canvas>
                 </p>
-            </article>
-
-            <h1>Monthly Expenditure Donut D3.js Chart</h1>
-
-            <div id="chart"></div>
+            </div>
 
         </div>
 
-    </main>
+    </div>
 
-    <footer class="bottom">
-        <div class="center">
-            All rights reserved &copy;
-        </div>
+    <!-- This is a Semantic HTML Change 3-->
+    <!-- adding a footer element is a semantic HTML change -->
+    
+    <footer class="bottom center">                      
+        <p>All rights reserved &copy; Soumik Paul</p>
     </footer>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.20.0/axios.min.js" integrity="sha512-quHCp3WbBNkwLfYUMd+KwBAgpVukJu5MncuQaWXgCrfgcxCJAq/fo+oqrRKOj+UKEmyMCG3tb8RB63W+EmrOBg==" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js" integrity="sha512-s+xg36jbIujB2S2VKfpGmlC3T5V2TF3lY48DX7u2r9XzGzgPsa6wTpOQA7J9iffvdeBN0q9tKzRxVxw1JviZPg==" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/7.8.5/d3.min.js" integrity="sha512-M7nHCiNUOwFt6Us3r8alutZLm9qMt4s9951uo8jqO4UwJ1hziseL6O3ndFyigx6+LREfZqnhHxYjKRJ8ZQ69DQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.5.0/axios.min.js" integrity="sha512-aoTNnqZcT8B4AmeCFmiSnDlc4Nj/KPaZyB5G7JnOnUEkdNpCZs1LCankiYi01sLTyWy+m2P+W4XM+BuQ3Q4/Dg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.3/Chart.min.js"></script>
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.0/chart.min.js" integrity="sha512-7U4rRB8aGAHGVad3u2jiC7GA5/1YhQcQjxKeaVms/bT66i3LVBMRcBI9KwABNWnxOSwulkuSXxZLGuyfvo7V1A==" crossorigin="anonymous" referrerpolicy="no-referrer"></script> -->
+    <!-- <script src="https://cdn.jsdelivr.net/npm/chart.js"></script> -->
+    <script src="http://d3js.org/d3.v3.min.js"></script>
+    <script src="d3chart.js"></script>
 
     <script>
-        var dataSource = {
-                datasets: [
-                    {
-                        data: [],
-                        backgroundColor: [
-                            '#ffcd56',
-                            '#ff6384',
-                            '#36a2eb',
-                            '#fd6b19',
-                            '#4bc0c0',
-                            '#9966ff',
-                            '#ff9f40',
-                            '#33cc33',
-                            '#ffcc99',
-                            '#3399ff',
-                        ]
 
-                    }
+        
+        //Fetching data from data.json file
+        /*var dataSource = {
+            datasets: [{
+                data: [],
+                
+                backgroundColor:[
+                    '#ffcd56',
+                    '#ff6384',
+                    '#36a2eb',
+                    '#fd6b19',
+                    '#4caf50',
+                    '#9c27b0',
+                    '#795548',
+                    '#f44336',
+                    '#2196f3',
+                    '#ff5722',
+                    '#607d8b'
                 ],
-                labels: []
-            };
+            }],
+        
+            // These labels appear in the legend and in the tooltips when hovering different arcs
+            labels: [
+            ]
+        };
 
-        function createChart() {
-            var ctx = document.getElementById('myChart').getContext('2d');
-            var myPieChart = new Chart(ctx, {
-                type: 'pie',
+        function createChart(){
+            var ctx=document.getElementById('myChart').getContext("2d");
+            var myPieChart=new Chart(ctx,{
+                type:'pie',
                 data: dataSource
             });
         }
+        
 
-        function getBudget() {
-            axios.get('http://localhost:3000/budget')
-            .then(function (res)
-            {
-                console.log(res)
-                for (var i = 0; i < res.data.myBudget.length; i++) {
-                    dataSource.datasets[0].data[i] = res.data.myBudget[i].budget;
-                    dataSource.labels[i] = res.data.myBudget[i].title;
-            
+        function getBudget(){
+            axios.get('http://localhost:3000/budget').then(function (res) {
+                console.log(res);
+                for(let i=0;i<res.data.myBudget.length;i++)
+                {
+                    dataSource.datasets[0].data[i]=res.data.myBudget[i].budget;
+                    dataSource.labels[i]=res.data.myBudget[i].title;
                 }
                 createChart();
             });
         }
 
-        getBudget();
 
-        d3.json("data.json").then(function(data) {
-            var categories = data.categories;
+        function getBudget(){
+            axios.get('http://localhost:3000/fetchall').then(function (res) {
+                console.log(res);
+                for(let i=0;i<res.data.length;i++)
+                {
+                    dataSource.datasets[0].data[i]=res.data.budget;
+                    dataSource.labels[i]=res.data.title;
+                    dataSource.datasets[1].backgroundColor[i]=res.data.color;
+                }
+                createChart();
+            });
+        }
+        getBudget();*/
 
-            var width = 500;
-            var height = 300;
-            var radius = Math.min(width, height) / 2;
 
-            var svg = d3.select("#chart")
-                .append("svg")
-                .attr("width", width)
-                .attr("height", height)
-                .append("g")
-                .attr("transform", "translate(" + width / 2 + "," + height / 2 + ")");
+        //Fetching data from mongodb 
 
-            var color = d3.scaleOrdinal()
-                .domain(categories.map(function(d) { return d.category; }))
-                .range(d3.schemeCategory10);
+        var dataSource = {
+            datasets: [
+              {
+                data: [],
+                backgroundColor: [],
+              },
+            ],
+          
+            // These labels appear in the legend and in the tooltips when hovering different arcs
+            labels: [],
+          };
+          
+          function createChart() {
+            var ctx = document.getElementById('myChart').getContext('2d');
+            var myPieChart = new Chart(ctx, {
+              type: 'pie',
+              data: dataSource,
+            });
+          }
+          
+          function getBudget() {
+            axios.get('http://localhost:3000/fetchall').then(function (res) {
+              console.log(res.data);
+          
+              // Clear existing data
+              dataSource.datasets[0].data = [];
+              dataSource.labels = [];
+              dataSource.datasets[0].backgroundColor = [];
+          
+              for (let i = 0; i < res.data.length; i++) {
+                dataSource.datasets[0].data.push(res.data[i].budget);
+                dataSource.labels.push(res.data[i].title);
+                dataSource.datasets[0].backgroundColor.push(res.data[i].color);
+              }
+          
+              createChart();
+            });
+          }
+          
+          getBudget();
+          
 
-            var pie = d3.pie()
-                .value(function(d) { return d.expenditure; });
-
-            var arc = d3.arc()
-                .outerRadius(radius - 10)
-                .innerRadius(radius - 70);
-
-            var pieData = pie(categories);
-
-            var g = svg.selectAll(".arc")
-                .data(pieData)
-                .enter().append("g")
-                .attr("class", "arc");
-
-            g.append("path")
-                .attr("d", arc)
-                .style("fill", function(d) { return color(d.data.category); });
-
-            g.append("text")
-                .attr("transform", function(d) { return "translate(" + arc.centroid(d) + ")"; })
-                .attr("dy", ".35em")
-                .style("text-anchor", "middle")
-                .text(function(d) { return d.data.category; });
-        });
     </script>
-
 </body>
 </html>
