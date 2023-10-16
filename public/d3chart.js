@@ -133,26 +133,6 @@ var dataSource1 = {
     labels: []
 };
 
-//Fetching data from data.json file
-// axios.get('http://localhost:3000/budget').then(function (res) 
-// {
-//     for (let i = 0; i < res.data.myBudget.length; i++) {
-//         dataSource1.data.push(res.data.myBudget[i].budget);
-//         dataSource1.labels.push(res.data.myBudget[i].title);
-//     }
-
-//     function randomData() {
-//         return dataSource1.labels.map(function (label, index) {
-//             return { label: label, value: dataSource1.data[index] };
-//         });
-//     }
-
-//     change(randomData());
-// });
-
-
-//Fetching data from data.json file
-
 axios.get('http://localhost:3000/fetchall').then(function (res) 
 {
     for (let i = 0; i < res.data.length; i++) {
